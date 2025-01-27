@@ -13,29 +13,33 @@
             color: #333;
         }
 
-        .header {
+        header {
             background-color: #a6db7b;
             padding: 20px;
             text-align: center;
         }
 
-        .header h1 {
+        header h1 {
             margin: 0;
             font-size: 36px;
             color: #fff;
         }
 
-        .header p {
+        header p {
             margin: 10px 0 0;
             color: #fff;
             font-size: 16px;
         }
 
+        main {
+            padding: 20px;
+        }
+
         .products {
             display: flex;
             justify-content: center;
-            padding: 20px;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .product {
@@ -46,6 +50,7 @@
             width: 30%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .product h2 {
@@ -59,26 +64,39 @@
             font-size: 14px;
             color: #666;
         }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>Boat</h1>
         <p>Boat is a lifestyle brand specializing in high-quality audio products, including earphones, headphones, and speakers, designed for music lovers and active lifestyles.</p>
-    </div>
-    <div class="products">
-        <div class="product">
-            <h2>Boat Rockerz 255</h2>
-            <p>The Boat Rockerz 255 is a stylish and lightweight wireless earphone offering superior sound quality, long battery life, and a secure fit, perfect for on-the-go music enthusiasts.</p>
+    </header>
+    <main>
+        <div class="products">
+            <div class="product">
+                <h2>Boat Rockerz 255</h2>
+                <p>The Boat Rockerz 255 is a stylish and lightweight wireless earphone offering superior sound quality, long battery life, and a secure fit, perfect for on-the-go music enthusiasts.</p>
+            </div>
+            <div class="product">
+                <h2>Boat Airdopes 441</h2>
+                <p>The Boat Airdopes 441 provides a true wireless experience with immersive audio, touch controls, and long-lasting battery life, ensuring a hassle-free experience.</p>
+            </div>
+            <div class="product">
+                <h2>Boat Nirvanaa Uno</h2>
+                <p>The Boat Nirvanaa Uno delivers crystal-clear sound with dynamic bass and an ergonomic design, ideal for those seeking premium wired earphones.</p>
+            </div>
         </div>
-        <div class="product">
-            <h2>Boat Airdopes 441</h2>
-            <p>The Boat Airdopes 441 provides a true wireless experience with immersive audio, touch controls, and long-lasting battery life, ensuring a hassle-free experience.</p>
-        </div>
-        <div class="product">
-            <h2>Boat Nirvanaa Uno</h2>
-            <p>The Boat Nirvanaa Uno delivers crystal-clear sound with dynamic bass and an ergonomic design, ideal for those seeking premium wired earphones.</p>
-        </div>
-    </div>
+    </main>
 </body>
 </html>
